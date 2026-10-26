@@ -15,6 +15,22 @@ class CategorySeeder extends Seeder
                 'description' => 'Berbagai pilihan mochi dengan rasa yang lezat.',
             ],
             [
+                'name' => 'Cheese',
+                'description' => 'Pilihan dessert dengan rasa keju.',
+            ],
+            [
+                'name' => 'Strawberry',
+                'description' => 'Pilihan dessert dengan rasa strawberry.',
+            ],
+            [
+                'name' => 'Cookies',
+                'description' => 'Pilihan dessert dengan rasa cookies.',
+            ],
+            [
+                'name' => 'Tiramisu',
+                'description' => 'Pilihan dessert dengan rasa tiramisu.',
+            ],
+            [
                 'name' => 'Dessert',
                 'description' => 'Pilihan dessert manis untuk menemani setiap momen.',
             ],

@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ $title ?? 'BitebyAy' }}</title>
+    <title>@yield('title', $title ?? 'BitebyAy')</title>
+
+    {{-- Fonts --}}
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=figtree:400,500,600,700|poppins:500,600,700&display=swap" rel="stylesheet" />
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
@@ -41,17 +45,17 @@
                             Home
                         </a>
 
-                        <a href="#menu"
+                        <a href="{{ route('home') }}#menu"
                         class="text-gray-700 font-medium hover:text-pink-600 transition">
                             Menu
                         </a>
 
-                        <a href="#about"
+                        <a href="{{ route('home') }}#about"
                         class="text-gray-700 font-medium hover:text-pink-600 transition">
                             About
                         </a>
 
-                        <a href="#contact"
+                        <a href="{{ route('home') }}#contact"
                         class="text-gray-700 font-medium hover:text-pink-600 transition">
                             Contact
                         </a>
@@ -268,17 +272,17 @@
                                     Home
                                 </a>
 
-                                <a href="#menu"
+                                <a href="{{ route('home') }}#menu"
                                 class="block text-gray-700 hover:text-pink-600">
                                     Menu
                                 </a>
 
-                                <a href="#about"
+                                <a href="{{ route('home') }}#about"
                                 class="block text-gray-700 hover:text-pink-600">
                                     About
                                 </a>
 
-                                <a href="#contact"
+                                <a href="{{ route('home') }}#contact"
                                 class="block text-gray-700 hover:text-pink-600">
                                     Contact
                                 </a>
@@ -345,7 +349,7 @@
 
         {{-- Footer --}}
         <footer>
-            {{-- Akan kita buat --}}
+            @include('partials.footer')
         </footer>
 
     </div>
